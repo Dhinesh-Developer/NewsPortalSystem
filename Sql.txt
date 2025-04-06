@@ -1,0 +1,36 @@
+INSERT INTO news (title, author, content, comment, date) VALUES
+(
+    'Advancements in Renewable Energy Technologies in 2025',
+    'Dr. Aisha Rahman',
+    'In 2025, the renewable energy sector witnessed significant breakthroughs, particularly in solar and wind technologies. Solar panels achieved unprecedented efficiency rates, and wind turbines became more cost-effective and widespread. These advancements contributed to a substantial decrease in global carbon emissions...',
+    'A comprehensive overview of the latest developments in renewable energy as of 2025.',
+    '2025-04-06'
+),
+(
+    'The Rise of Telemedicine: Transforming Healthcare Delivery',
+    'Michael Chen',
+    'The year 2025 marked a turning point for telemedicine, with virtual consultations becoming the norm. This shift improved access to healthcare, especially in remote areas, and reduced the burden on traditional healthcare facilities. Patients benefited from timely medical advice, and healthcare providers could manage their schedules more efficiently...',
+    'An in-depth analysis of how telemedicine revolutionized patient care in 2025.',
+    '2025-04-06'
+),
+(
+    'Artificial Intelligence in Education: Personalized Learning Experiences',
+    'Sophia Martinez',
+    'Educational institutions in 2025 increasingly integrated artificial intelligence to offer personalized learning experiences. AI algorithms analyzed students\' learning patterns and tailored curricula to individual needs, resulting in improved engagement and academic performance. This approach addressed diverse learning styles and paces...',
+    'Exploring the impact of AI on education and its role in customizing learning paths.',
+    '2025-04-06'
+),
+(
+    'Space Tourism Becomes Mainstream: A New Era of Travel',
+    'Liam O\'Connor',
+    'By 2025, space tourism transitioned from a niche market to a mainstream travel option. Several private companies offered suborbital and orbital flights, allowing civilians to experience space firsthand. This development sparked discussions on regulations, safety protocols, and the environmental impact of increased space travel...',
+    'An examination of the burgeoning space tourism industry and its implications.',
+    '2025-04-06'
+),
+(
+    'Breakthroughs in Quantum Computing: Implications for Cybersecurity',
+    'Dr. Priya Desai',
+    'Quantum computing made significant strides in 2025, with practical applications emerging across various sectors. While this technology promised unparalleled processing power, it also posed challenges for cybersecurity. Traditional encryption methods became vulnerable, prompting the development of quantum-resistant algorithms...',
+    'Analyzing the dual-edged sword of quantum computing advancements and cybersecurity concerns.',
+    '2025-04-06'
+);

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily News</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #58a6ff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .news-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(88, 166, 255, 0.2);
+    }
+
+    .news-card h2 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .news-card p {
+      margin: 5px 0;
+    }
+
+    .news-card .date {
+      font-size: 0.9em;
+      color: #8b949e;
+    }
+
+    .news-card .comment {
+      margin-top: 10px;
+      font-style: italic;
+      color: #9fef00;
+    }
+  </style>
+</head>
+<body>
+  <h1>📰 Today's Trending News</h1>
+  <div id="news-container"></div>
+
+  <script>
+    fetch("http://localhost:8080/auth/news")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("news-container");
+        if (data.length === 0) {
+          container.innerHTML = "<p>No news available.</p>";
+          return;
+        }
+  
+        data.forEach(news => {
+          const newsDiv = document.createElement("div");
+          newsDiv.classList.add("news-card");
+  
+          newsDiv.innerHTML = `
+            <h2>${news.title}</h2>
+            <p><strong>Author:</strong> ${news.author}</p>
+            <p>${news.content}</p>
+            <p class="date">🕒 ${news.date}</p>
+            ${news.comment ? `<p class="comment">💬 Comment: ${news.comment}</p>` : ""}
+            <form onsubmit="submitComment(event, ${news.id})">
+              <input type="text" id="comment-${news.id}" placeholder="Add a comment" style="width:70%; padding:5px;" required>
+              <button type="submit" style="padding:5px 10px;">send</button>
+            </form>
+          `;
+  
+          container.appendChild(newsDiv);
+        });
+      })
+      .catch(error => {
+        console.error("Error fetching news:", error);
+        document.getElementById("news-container").innerHTML = "<p>Error loading news. Try again later.</p>";
+      });
+  
+    function submitComment(event, newsId) {
+      event.preventDefault();
+      const input = document.getElementById(`comment-${newsId}`);
+      const comment = input.value.trim();
+  
+      if (comment === "") return;
+  
+      fetch(`http://localhost:8080/auth/addComment?id=${newsId}&comment=${encodeURIComponent(comment)}`, {
+        method: "POST"
+      })
+        .then(response => {
+          if (response.ok) {
+            alert("Comment added successfully!");
+            location.reload(); // Reload to see the new comment
+          } else {
+            alert("Failed to add comment.");
+          }
+        })
+        .catch(error => {
+          console.error("Error posting comment:", error);
+          alert("Error while submitting comment.");
+        });
+    }
+  </script>
+  
+</body>
+</html>

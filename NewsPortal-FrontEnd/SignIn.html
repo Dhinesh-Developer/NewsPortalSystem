@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News Portal - Sign In</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      color: #58a6ff;
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    nav a {
+      color: #c9d1d9;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      border: 1px solid #30363d;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #238636;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2ea043;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>News Portal</h1>
+  <nav id="navbar"></nav>
+</header>
+
+<div class="container">
+  <form onsubmit="return checkLogin(event)">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required/>
+    </div>
+    <div class="form-group">
+      <label for="passwd">Password</label>
+      <input type="password" name="passwd" id="passwd" required/>
+    </div>
+    <input type="submit" value="Sign In" />
+  </form>
+</div>
+
+<script>
+  function checkLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const passwd = document.getElementById('passwd').value.trim();
+
+    if (email === "partiban@gmail.com" && passwd === "partiban123") {
+      alert("Admin logged in successfully!");
+      window.location.href = "Dashboard.html";
+    } else {
+      alert("User logged in successfully!");
+      window.location.href = "home.html";
+    }
+
+    return false;
+  }
+</script>
+
+</body>
+</html>

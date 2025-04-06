@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      color: #58a6ff;
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    nav a {
+      color: #c9d1d9;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .dashboard-container {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #161b22;
+      padding: 20px;
+      width: 220px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #58a6ff;
+      font-size: 1.1em;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      background-color: #161b22;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Admin Dashboard</h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="News.html">News</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="SignIn.html">Logout</a>
+  </nav>
+</header>
+
+<div class="dashboard-container">
+  <h2>Welcome, Admin</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://img.icons8.com/fluency/48/add-user-male.png" alt="Add User Icon"/>
+      <a href="addUser.html">Add User</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/48/news.png" alt="Add News Icon"/>
+      <a href="addNews.html">Add News</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/48/edit-property.png" alt="Update News Icon"/>
+      <a href="updateNews.html">Update News</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 News Hub | Admin Dashboard
+</footer>
+
+</body>
+</html>
