@@ -1,0 +1,15 @@
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Admin\AdminNewsController.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Admin\UserAdminController.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\AdminService\AdminNewsService.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\AdminService\AdminUserService.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Controller\NewsController.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Controller\UserController.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Entity\News.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Entity\User.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Exception\NewsException.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Exception\UserException.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\NewsPortalApplication.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Repository\NewsRepo.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Repository\UserRepo.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Service\NewsService.java
+F:\NewPortal\NewsPortal-Backend\src\main\java\com\news\NewsPortal\Service\UserService.java
